@@ -1,0 +1,6 @@
+---
+description: "[claude-mem, reference only] Turn one document into a kawaii NotebookLM slide-deck PDF. Use for \"wowerpoint this\", \"make a deck about <file>\", \"turn this report into slides\", or any request to render a single"
+argument-hint: "[request]"
+---
+
+Use the `wowerpoint` skill (.claude/skills/wowerpoint/SKILL.md) to handle this request: $ARGUMENTS
