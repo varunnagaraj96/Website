@@ -1,1 +1,11 @@
 graphify-out/
+
+# notebooklm skill: never commit auth/session state (Google account credentials)
+.claude/skills/notebooklm/data/
+.claude/skills/notebooklm/.venv/
+.claude/skills/notebooklm/browser_state/
+.claude/skills/notebooklm/state.json
+.claude/skills/notebooklm/auth_info.json
+.claude/skills/notebooklm/cookies.json
+.claude/skills/notebooklm/library.json
+.claude/skills/notebooklm/notebooks.json
