@@ -1,0 +1,6 @@
+---
+description: "Suite of tools for creating elaborate, multi-component claude.ai HTML artifacts using modern frontend web technologies (React, Tailwind CSS, shadcn/ui). Use for complex artifacts requiring state manag"
+argument-hint: "[request]"
+---
+
+Use the `artifacts-builder` skill (.claude/skills/artifacts-builder/SKILL.md) to handle this request: $ARGUMENTS
