@@ -1,6 +1,13 @@
 {
   "version": 1,
   "skills": {
+    "advisor-orchestrator-worker": {
+      "source": "Shubhamsaboo/awesome-llm-apps",
+      "ref": "main",
+      "sourceType": "github",
+      "skillPath": "agent_skills/advisor-orchestrator-worker/SKILL.md",
+      "computedHash": "814b0d4ccd47c52a5d02947e2c127bf8eb2c0f4c90ed9297a79b6ff5fa36ff64"
+    },
     "animation-vocabulary": {
       "source": "emilkowalski/skill",
       "sourceType": "github",
@@ -42,6 +49,13 @@
       "sourceType": "github",
       "skillPath": "changelog-generator/SKILL.md",
       "computedHash": "0facdb5c491a654e3b0f6d300fb8fa14472d811cb715c632dc2862919b277dae"
+    },
+    "commit-archaeologist": {
+      "source": "Shubhamsaboo/awesome-llm-apps",
+      "ref": "main",
+      "sourceType": "github",
+      "skillPath": "agent_skills/commit-archaeologist/SKILL.md",
+      "computedHash": "65d1e6347d0ab6182f67d9703474d079ba8264e20e9092c4697194f6fb87e085"
     },
     "competitive-ads-extractor": {
       "source": "ComposioHQ/awesome-claude-skills",
@@ -211,6 +225,13 @@
       "skillPath": "skills/pick-ui-library/SKILL.md",
       "computedHash": "f8d4d2cf4677bf54b14f35f62a741add93541bfcb67863315a40164365161b49"
     },
+    "project-graveyard": {
+      "source": "Shubhamsaboo/awesome-llm-apps",
+      "ref": "main",
+      "sourceType": "github",
+      "skillPath": "agent_skills/project-graveyard/SKILL.md",
+      "computedHash": "1c69cf062b5900e9494a1a67a71213d5a7ea12d8cb812b4d6309fa1c2a0cf75d"
+    },
     "raffle-winner-picker": {
       "source": "ComposioHQ/awesome-claude-skills",
       "sourceType": "github",
@@ -228,6 +249,13 @@
       "sourceType": "github",
       "skillPath": "skills/review-animations/SKILL.md",
       "computedHash": "b9f669af5ae280c19a592a94611520335a81de25c88f225bf60ae4b2d66c8c7c"
+    },
+    "scope-creep-detector": {
+      "source": "Shubhamsaboo/awesome-llm-apps",
+      "ref": "main",
+      "sourceType": "github",
+      "skillPath": "agent_skills/scope-creep-detector/SKILL.md",
+      "computedHash": "e9344d9832f90acc8b8c8990fa384e8e2afd0b725bd11615d31861dacc0d9a11"
     },
     "skill-creator": {
       "source": "ComposioHQ/awesome-claude-skills",
@@ -270,6 +298,13 @@
       "sourceType": "github",
       "skillPath": "theme-factory/SKILL.md",
       "computedHash": "93e78aa44f8fa00bb2c0608f400de1e1dcd6494611dd8ea27c867654240c7bcd"
+    },
+    "thinking-out-loud": {
+      "source": "Shubhamsaboo/awesome-llm-apps",
+      "ref": "main",
+      "sourceType": "github",
+      "skillPath": "agent_skills/thinking-out-loud/SKILL.md",
+      "computedHash": "9fdb40ef2f7414e79c0cb3e2ab122bdc2328ad125194d9cf57f167fbab54c230"
     },
     "twitter-algorithm-optimizer": {
       "source": "ComposioHQ/awesome-claude-skills",
