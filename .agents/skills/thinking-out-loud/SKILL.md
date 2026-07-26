@@ -19,6 +19,8 @@ metadata:
   author: "Shubham Saboo"
   version: "1.3.0"
   source: "https://github.com/Shubhamsaboo/awesome-llm-apps"
+user-invocable: true
+argument-hint: "[request]"
 ---
 
 # Thinking Out Loud

@@ -17,6 +17,8 @@ compatibility: >-
   the Gemini API (GEMINI_API_KEY or GOOGLE_API_KEY); advisor via the claude
   CLI, falling back to the Anthropic API (ANTHROPIC_API_KEY). Needs jq. All
   snippets are bash. Runs in any harness that can execute shell commands.
+user-invocable: true
+argument-hint: "[request]"
 ---
 
 # Advisor Orchestrator Worker

@@ -12,6 +12,8 @@ metadata:
   author: "Matt Van Horn"
   version: "1.0.0"
   source: "https://github.com/Shubhamsaboo/awesome-llm-apps"
+user-invocable: true
+argument-hint: "[request]"
 ---
 
 # Scope Creep Detector
