@@ -1,6 +1,8 @@
 ---
 name: timeline-report
 description: Generate a "Journey Into [Project]" narrative report analyzing a project's entire development history from claude-mem's timeline. Use when asked for a timeline report, project history analysis, development journey, or full project report.
+user-invocable: true
+argument-hint: "[request]"
 ---
 
 > **Reference only — not functional here.** This skill is part of [claude-mem](https://github.com/thedotmack/claude-mem) and expects its worker service + SQLite/Chroma database, set up by `npx claude-mem install` (or the `/plugin` marketplace flow). That installer was not run in this repo — only the skill definitions were copied in for reference. Invoking this as-is will fail or no-op since there is no memory database behind it.

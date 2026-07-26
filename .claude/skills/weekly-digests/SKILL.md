@@ -1,6 +1,8 @@
 ---
 name: weekly-digests
 description: Generate a serial week-by-week narrative digest of a project's full claude-mem timeline. Splits the timeline into per-ISO-week files, then runs one consecutive subagent per week — each receiving the prior week's carry-forward block — to produce one chapter per ISO week of data. Use when asked for "weekly digests", "week-by-week story", "serial timeline", or "narrative chapters" of a project's history.
+user-invocable: true
+argument-hint: "[request]"
 ---
 
 > **Reference only — not functional here.** This skill is part of [claude-mem](https://github.com/thedotmack/claude-mem) and expects its worker service + SQLite/Chroma database, set up by `npx claude-mem install` (or the `/plugin` marketplace flow). That installer was not run in this repo — only the skill definitions were copied in for reference. Invoking this as-is will fail or no-op since there is no memory database behind it.

@@ -2,6 +2,8 @@
 name: cast
 description: "Cast genjutsu on a UI - creative coding for motion, micro-interactions, and wow-factor. Scans the stack, proposes an interaction thesis, loads the right sub-skills, implements the illusion. Adapts to Web, Android (Compose), Apple (SwiftUI)."
 allowed-tools: Bash, Read, Edit, Write, Grep, Glob, WebSearch
+user-invocable: true
+argument-hint: "[request]"
 ---
 
 # Cast - The Illusionist

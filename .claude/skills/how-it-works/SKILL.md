@@ -1,6 +1,8 @@
 ---
 name: how-it-works
 description: Explain how claude-mem captures observations, when memory injection kicks in, and where data lives. Use when the user asks "how does claude-mem work?" or "what is this thing doing?".
+user-invocable: true
+argument-hint: "[request]"
 ---
 
 > **Reference only — not functional here.** This skill is part of [claude-mem](https://github.com/thedotmack/claude-mem) and expects its worker service + SQLite/Chroma database, set up by `npx claude-mem install` (or the `/plugin` marketplace flow). That installer was not run in this repo — only the skill definitions were copied in for reference. Invoking this as-is will fail or no-op since there is no memory database behind it.

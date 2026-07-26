@@ -6,6 +6,7 @@ license: MIT
 metadata:
   author: claudekit
   version: "1.0.0"
+user-invocable: true
 ---
 
 # UI Styling Skill

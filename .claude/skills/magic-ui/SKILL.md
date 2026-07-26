@@ -3,6 +3,8 @@ name: magic-ui
 description: Use this skill when users want to add, customize, or troubleshoot Magic UI components in React/Next.js projects. It covers component selection, shadcn registry installation (`@magicui/*`), integration patterns, and practical quality checks for accessibility and maintainability.
 metadata:
   short-description: Build and customize UIs with Magic UI components
+user-invocable: true
+argument-hint: "[request]"
 ---
 
 # Magic UI

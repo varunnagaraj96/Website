@@ -2,6 +2,8 @@
 name: threejs
 description: Use when building or reviewing WebGL/WebGPU 3D graphics on the web — scenes, cameras, meshes, materials, lighting, animation, model loading, or shaders. Backed by three.js (mrdoob/three.js), the standard cross-browser JS 3D library. Not a Claude Code skill upstream (no SKILL.md in that repo, only an llms.txt) — this is a custom wrapper distilled from it. Not for CSS-only or SVG-only visual effects, or 2D canvas work.
 allowed-tools: Read, Write, Edit, Bash
+user-invocable: true
+argument-hint: "[request]"
 ---
 
 # three.js

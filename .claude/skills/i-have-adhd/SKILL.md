@@ -8,6 +8,8 @@ metadata:
     tags: [ADHD, Output Style, Productivity, Formatting]
     category: productivity
     related_skills: []
+user-invocable: true
+argument-hint: "[request]"
 ---
 
 # i-have-adhd

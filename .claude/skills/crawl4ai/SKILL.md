@@ -2,6 +2,8 @@
 name: crawl4ai
 description: Use when a task needs more than a single-page fetch — deep multi-page crawls, JS-rendered/dynamic sites, structured data extraction (CSS/XPath or LLM-driven schemas), or building a scraping/RAG data pipeline. Backed by unclecode/crawl4ai, a Python library and CLI that turns websites into clean, LLM-ready Markdown. Not a Claude Code skill upstream (no SKILL.md in that repo) — this is a custom wrapper. For a single quick page lookup, prefer WebFetch instead; reach for crawl4ai when the site needs a real browser, multiple pages, or structured output.
 allowed-tools: Bash, Read, Write
+user-invocable: true
+argument-hint: "[request]"
 ---
 
 # crawl4ai

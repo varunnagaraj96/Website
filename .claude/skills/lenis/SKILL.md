@@ -2,6 +2,8 @@
 name: lenis
 description: Use when the user wants smooth/inertia scrolling on a website, wants to sync scroll-driven animations (GSAP ScrollTrigger, WebGL/Three.js scenes, parallax) to a single scroll loop, or reports smooth-scroll bugs (modals not scrolling, scroll-snap conflicts, ScrollTrigger drift, anchor links not working). Backed by Lenis (darkroomengineering/lenis), a dependency-free JS library that wraps native scroll. Not a component library — it does not render UI.
 allowed-tools: Read, Write, Edit, Bash, Glob, Grep
+user-invocable: true
+argument-hint: "[request]"
 ---
 
 # Lenis

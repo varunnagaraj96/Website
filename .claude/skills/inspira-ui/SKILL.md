@@ -2,6 +2,8 @@
 name: inspira-ui
 description: Use when building or styling a Vue or Nuxt UI and the user wants animated, Aceternity-UI/Magic-UI-style components (backgrounds, buttons, cards, cursors, device mocks, input/forms, special effects, testimonials, text animations, data visualization). Not applicable to React/Next.js/Svelte projects — inspira-ui is Vue/Nuxt + Tailwind CSS v4 only. For animation logic itself (not pre-built components), prefer the motion-dev-animations skill.
 allowed-tools: Read, Write, Edit, Bash, Glob, Grep
+user-invocable: true
+argument-hint: "[request]"
 ---
 
 # Inspira UI

@@ -14,6 +14,8 @@ description: >
   For reliable activation, pair this description with a CLAUDE.md instruction
   or harness-level session-start hook (see Recommended Activation Setup) —
   description-level matching alone is not enforceable.
+user-invocable: true
+argument-hint: "[request]"
 ---
 
 # Task Observer — Continuous Skill Discovery & Improvement

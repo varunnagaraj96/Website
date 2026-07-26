@@ -10,6 +10,8 @@ metadata:
   created: "2025-11-07"
   updated: "2025-11-08"
   optimization: "Research-backed: imperative language, few-shot (3 examples), layered complexity, progressive loading"
+user-invocable: true
+argument-hint: "[request]"
 ---
 
 # Motion Dev Animations

@@ -2,6 +2,8 @@
 name: ghost-pepper
 description: Reference info about Ghost Pepper (matthartman/ghost-pepper), a free open-source macOS menu bar app for 100% on-device speech-to-text and meeting transcription. Use when the user asks about local/private voice dictation or meeting-transcription tools for Mac, compares it to cloud dictation services, or wants to know how to install or configure it. Not a library, CLI, or API — there is nothing for Claude Code to invoke; this is purely reference knowledge to answer questions or make a recommendation.
 allowed-tools: Read
+user-invocable: true
+argument-hint: "[request]"
 ---
 
 # Ghost Pepper
