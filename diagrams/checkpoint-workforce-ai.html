@@ -1,0 +1,255 @@
+<!doctype html>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Check Point Workforce AI — Security Operations Architecture</title>
+<style>
+  :root {
+    color-scheme: light dark;
+    --bg: #f8fafc;
+    --fg: #172033;
+    --muted: #5b6475;
+    --line: #64748b;
+    --neutral: #e2e8f0;
+    --input: #bfdbfe;
+    --process: #c7d2fe;
+    --storage: #99f6e4;
+    --external: #fde68a;
+    --risk: #fecaca;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #0f172a;
+      --fg: #e5e7eb;
+      --muted: #a3adbd;
+      --line: #94a3b8;
+      --neutral: #334155;
+      --input: #1d4ed8;
+      --process: #4338ca;
+      --storage: #0f766e;
+      --external: #92400e;
+      --risk: #991b1b;
+    }
+  }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--fg);
+    font:
+      14px/1.4 ui-sans-serif,
+      system-ui,
+      -apple-system,
+      BlinkMacSystemFont,
+      "Segoe UI",
+      sans-serif;
+  }
+  main {
+    max-width: 1520px;
+    margin: 32px auto;
+    padding: 0 20px;
+  }
+  svg {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+  .title {
+    font-size: 20px;
+    font-weight: 650;
+    fill: var(--fg);
+  }
+  .subtitle {
+    font-size: 13px;
+    fill: var(--muted);
+  }
+  .label {
+    font-size: 14px;
+    font-weight: 600;
+    fill: var(--fg);
+  }
+  .sub {
+    font-size: 11.5px;
+    fill: var(--muted);
+  }
+  .small {
+    font-size: 12px;
+    fill: var(--muted);
+  }
+  .edgelabel {
+    font-size: 11px;
+    fill: var(--muted);
+  }
+  .node {
+    stroke: var(--line);
+    stroke-width: 1;
+  }
+  .neutral {
+    fill: var(--neutral);
+  }
+  .input {
+    fill: var(--input);
+  }
+  .process {
+    fill: var(--process);
+  }
+  .storage {
+    fill: var(--storage);
+  }
+  .external {
+    fill: var(--external);
+  }
+  .risk {
+    fill: var(--risk);
+  }
+  .edge {
+    stroke: var(--line);
+    stroke-width: 1.5;
+    fill: none;
+  }
+  .zone {
+    fill: none;
+    stroke: var(--line);
+    stroke-width: 1;
+    stroke-dasharray: 6 5;
+    opacity: 0.8;
+  }
+  .swatch {
+    stroke: var(--line);
+    stroke-width: 1;
+  }
+</style>
+<main>
+  <svg viewBox="0 0 1520 900" xmlns="http://www.w3.org/2000/svg">
+    <defs>
+      <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+        <path d="M0,0 L10,5 L0,10 z" fill="var(--line)"></path>
+      </marker>
+    </defs>
+
+    <text x="40" y="34" class="title">Check Point Workforce AI</text>
+    <text x="40" y="54" class="subtitle">How Infinity AI Copilot augments SOC analysts and automates response</text>
+
+    <!-- Trust zone: Security Workforce -->
+    <rect x="900" y="90" width="300" height="680" rx="12" class="zone"></rect>
+    <text x="1050" y="118" class="small" text-anchor="middle">Security Workforce (Human + AI)</text>
+
+    <!-- Connectors (drawn first, behind nodes) -->
+    <!-- A -> B -->
+    <path d="M260,475 L330,475" class="edge" marker-end="url(#arrow)"></path>
+    <text x="295" y="466" class="edgelabel" text-anchor="middle">telemetry</text>
+
+    <!-- B -> C -->
+    <path d="M550,460 L585,460 L585,320 L620,320" class="edge" marker-end="url(#arrow)"></path>
+    <text x="595" y="400" class="edgelabel" text-anchor="middle" transform="rotate(-90 595 400)">detect &amp; correlate</text>
+
+    <!-- C -> D -->
+    <path d="M730,370 L730,610" class="edge" marker-end="url(#arrow)"></path>
+    <text x="745" y="490" class="edgelabel">context</text>
+
+    <!-- C -> E -->
+    <path d="M840,300 L885,300 L885,195 L930,195" class="edge" marker-end="url(#arrow)"></path>
+    <text x="893" y="250" class="edgelabel" text-anchor="middle" transform="rotate(-90 893 250)">AI-assisted triage</text>
+
+    <!-- C -> F -->
+    <path d="M840,340 L895,340 L895,415 L930,415" class="edge" marker-end="url(#arrow)"></path>
+    <text x="903" y="380" class="edgelabel" text-anchor="middle" transform="rotate(-90 903 380)">AI-assisted investigation</text>
+
+    <!-- C -> G -->
+    <path d="M840,360 L905,360 L905,635 L930,635" class="edge" marker-end="url(#arrow)"></path>
+    <text x="913" y="500" class="edgelabel" text-anchor="middle" transform="rotate(-90 913 500)">auto-remediation playbooks</text>
+
+    <!-- E -> F -->
+    <path d="M1060,240 L1060,370" class="edge" marker-end="url(#arrow)"></path>
+    <text x="1075" y="310" class="edgelabel">escalate</text>
+
+    <!-- F -> H -->
+    <path d="M1190,400 L1225,400 L1225,320 L1260,320" class="edge" marker-end="url(#arrow)"></path>
+    <text x="1235" y="365" class="edgelabel" text-anchor="middle" transform="rotate(-90 1235 365)">confirmed threat</text>
+
+    <!-- G -> H -->
+    <path d="M1190,610 L1240,610 L1240,360 L1260,360" class="edge" marker-end="url(#arrow)"></path>
+    <text x="1250" y="500" class="edgelabel" text-anchor="middle" transform="rotate(-90 1250 500)">contained</text>
+
+    <!-- H -> I -->
+    <path d="M1370,380 L1370,510" class="edge" marker-end="url(#arrow)"></path>
+    <text x="1385" y="450" class="edgelabel">hardened</text>
+
+    <!-- Node A: Global Telemetry & Alerts -->
+    <rect x="40" y="430" width="220" height="90" rx="10" class="node input"></rect>
+    <text x="150" y="465" class="label" text-anchor="middle">Global Telemetry</text>
+    <text x="150" y="484" class="label" text-anchor="middle">&amp; Alerts</text>
+    <text x="150" y="503" class="sub" text-anchor="middle">network · endpoint · cloud · email</text>
+
+    <!-- Node B: ThreatCloud AI -->
+    <rect x="330" y="430" width="220" height="90" rx="10" class="node external"></rect>
+    <text x="440" y="465" class="label" text-anchor="middle">ThreatCloud AI</text>
+    <text x="440" y="484" class="label" text-anchor="middle">Global Threat Intel</text>
+    <text x="440" y="503" class="sub" text-anchor="middle">90M+ sensors, real-time feeds</text>
+
+    <!-- Node C: Infinity AI Copilot -->
+    <rect x="620" y="270" width="220" height="100" rx="10" class="node process"></rect>
+    <text x="730" y="305" class="label" text-anchor="middle">Infinity AI Copilot</text>
+    <text x="730" y="324" class="label" text-anchor="middle">GenAI Reasoning Engine</text>
+    <text x="730" y="343" class="sub" text-anchor="middle">correlates, prioritizes,</text>
+    <text x="730" y="358" class="sub" text-anchor="middle">recommends actions</text>
+
+    <!-- Node D: Threat Intel Knowledge Graph -->
+    <rect x="620" y="610" width="220" height="90" rx="10" class="node storage"></rect>
+    <text x="730" y="645" class="label" text-anchor="middle">Threat Intel</text>
+    <text x="730" y="664" class="label" text-anchor="middle">Knowledge Graph</text>
+    <text x="730" y="683" class="sub" text-anchor="middle">IOCs, TTPs, case history</text>
+
+    <!-- Node E: Tier-1 Analyst -->
+    <rect x="930" y="150" width="260" height="90" rx="10" class="node process"></rect>
+    <text x="1060" y="185" class="label" text-anchor="middle">Tier-1 Analyst</text>
+    <text x="1060" y="204" class="label" text-anchor="middle">AI-Assisted Triage</text>
+    <text x="1060" y="223" class="sub" text-anchor="middle">reviews copilot-ranked alerts</text>
+
+    <!-- Node F: Tier-2/3 Analyst -->
+    <rect x="930" y="370" width="260" height="90" rx="10" class="node process"></rect>
+    <text x="1060" y="405" class="label" text-anchor="middle">Tier-2/3 Analyst</text>
+    <text x="1060" y="424" class="label" text-anchor="middle">Investigation &amp; Response</text>
+    <text x="1060" y="443" class="sub" text-anchor="middle">deep-dives escalated cases</text>
+
+    <!-- Node G: SOAR Automated Playbooks -->
+    <rect x="930" y="590" width="260" height="90" rx="10" class="node process"></rect>
+    <text x="1060" y="625" class="label" text-anchor="middle">SOAR Automated</text>
+    <text x="1060" y="644" class="label" text-anchor="middle">Playbooks</text>
+    <text x="1060" y="663" class="sub" text-anchor="middle">auto-blocks known threats</text>
+
+    <!-- Node H: Blocked / Remediated Incident -->
+    <rect x="1260" y="290" width="220" height="90" rx="10" class="node risk"></rect>
+    <text x="1370" y="325" class="label" text-anchor="middle">Blocked /</text>
+    <text x="1370" y="344" class="label" text-anchor="middle">Remediated Incident</text>
+    <text x="1370" y="363" class="sub" text-anchor="middle">closed with audit trail</text>
+
+    <!-- Node I: Protected Estate -->
+    <rect x="1260" y="510" width="220" height="110" rx="10" class="node neutral"></rect>
+    <text x="1370" y="545" class="label" text-anchor="middle">Protected Estate</text>
+    <text x="1370" y="564" class="sub" text-anchor="middle">network · cloud</text>
+    <text x="1370" y="580" class="sub" text-anchor="middle">endpoint · email · mobile</text>
+
+    <!-- Legend -->
+    <g transform="translate(40, 800)">
+      <rect x="0" y="0" width="16" height="16" rx="3" class="swatch input"></rect>
+      <text x="22" y="12" class="small">Telemetry source</text>
+
+      <rect x="180" y="0" width="16" height="16" rx="3" class="swatch external"></rect>
+      <text x="202" y="12" class="small">External threat intel</text>
+
+      <rect x="380" y="0" width="16" height="16" rx="3" class="swatch process"></rect>
+      <text x="402" y="12" class="small">AI / analyst process</text>
+
+      <rect x="580" y="0" width="16" height="16" rx="3" class="swatch storage"></rect>
+      <text x="602" y="12" class="small">Knowledge store</text>
+
+      <rect x="760" y="0" width="16" height="16" rx="3" class="swatch risk"></rect>
+      <text x="782" y="12" class="small">Incident outcome</text>
+
+      <rect x="940" y="0" width="16" height="16" rx="3" class="swatch neutral"></rect>
+      <text x="962" y="12" class="small">Protected assets</text>
+
+      <rect x="1120" y="0" width="24" height="16" rx="3" class="zone"></rect>
+      <text x="1150" y="12" class="small">Trust boundary</text>
+    </g>
+  </svg>
+</main>
